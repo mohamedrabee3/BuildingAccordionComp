@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1;
+      }
+      .item {
+        box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 30px;
+        align-items: center;
+      }
+      .accordion {
+        width: 700px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .icon {
+        width: 24px;
+        height: 24px;
+        stroke: #2f9e44;
+      }
+
+      .number,
+      .text {
+        font-size: 20px;
+        font-weight: 600;
+        /* color: #2f9e44; */
+      }
+      .number {
+        color: #868e96;
+      }
+      .open {
+        border-top: 4px solid #2f9e44;
+      }
+      .open .hidden-box {
+        display: block;
+      }
+      .open .number,
+      .open .text {
+        color: #2f9e44;
+      }
+      .hidden-box {
+        grid-column: 2;
+        display: none;
+      }
+      .hidden-box p {
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+      .hidden-box ul {
+        color: #868e96;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <div class="item">
+        <p class="number">01</p>
+        <p class="text">Where are these chairs assembled?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            fugit architecto laborum sint quis ducimus alias qui, voluptas
+            adipisci, omnis id, nisi consequuntur ex possimus nobis esse iste
+            illum assumenda est. Ipsa quo delectus aperiam accusamus, architecto
+            ullam. Dolorum, quaerat.
+          </p>
+
+          <ul>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+            <li>Animi repudiandae qui praesentium! Vero doloremque .</li>
+            <li>sequi voluptatum perferendis ratione nesciunt ex adipisci.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item open">
+        <p class="number">02</p>
+        <p class="text">How Long do I have to return my chair?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            fugit architecto laborum sint quis ducimus alias qui, voluptas
+            adipisci, omnis id, nisi consequuntur ex possimus nobis esse iste
+            illum assumenda est. Ipsa quo delectus aperiam accusamus, architecto
+            ullam. Dolorum, quaerat.
+          </p>
+
+          <ul>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+            <li>Animi repudiandae qui praesentium! Vero doloremque .</li>
+            <li>sequi voluptatum perferendis ratione nesciunt ex adipisci.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item">
+        <p class="number">03</p>
+        <p class="text">Do you ship to countries outside the EU?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            fugit architecto laborum sint quis ducimus alias qui, voluptas
+            adipisci, omnis id, nisi consequuntur ex possimus nobis esse iste
+            illum assumenda est. Ipsa quo delectus aperiam accusamus, architecto
+            ullam. Dolorum, quaerat.
+          </p>
+
+          <ul>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+            <li>Animi repudiandae qui praesentium! Vero doloremque .</li>
+            <li>sequi voluptatum perferendis ratione nesciunt ex adipisci.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
